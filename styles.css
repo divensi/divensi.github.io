@@ -33,7 +33,15 @@ body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: var(--text-primary);
-    background-color: var(--bg-primary);
+    /* iOS Safe Area Support */
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+    background-size: cover;
+    background-position: center;
+    /* height: 100svh; */
+
+    /* padding-top: constant(safe-area-inset-top); Fallback for older iOS versions */
+    /* padding-top: env(safe-area-inset-top); */
 }
 
 .container {
@@ -69,21 +77,26 @@ body {
 
 /* Navigation */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    /* background: rgba(255, 255, 255, 0.5); */
-    color: white;
+    position: sticky;
+    top: 5px;
+    width: calc(100% - 10px);
+    background: rgba(255, 255, 255, 0.3);
+    color: var(--text-primary);
     backdrop-filter: blur(5px);
     /* box-shadow: var(--shadow-sm); */
     z-index: 1000;
     transition: all 0.3s ease;
+    margin: 0 5px;
+    border-radius: 10px;
+    /* iOS Safe Area Support */
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
 }
 
 .navbar.scrolled {
     box-shadow: var(--shadow-md);
     background: rgba(255, 255, 255, 0.5);
-
 }
 
 .navbar .container {
@@ -97,13 +110,6 @@ body {
 .navbar .nav-brand .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    background: var(--gradient-1-dark);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.navbar.scrolled .nav-brand .logo {
     background: var(--gradient-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -118,14 +124,10 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: white;
+    color: var(--text-primary);
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
-}
-
-.navbar.scrolled .nav-link {
-    color: var(--text-secondary);
 }
 
 .nav-link::after {
@@ -159,11 +161,12 @@ body {
     height: 3px;
     background: var(--text-primary);
     border-radius: 2px;
-    transition: all 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 /* Hero Section */
 .hero {
+    margin-top: calc(-70px);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -171,6 +174,8 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
+    /* iOS Safe Area Support - ensure content is properly positioned */
+    padding-top: env(safe-area-inset-top);
 }
 
 .hero::before {
@@ -555,13 +560,16 @@ body {
     padding: 2rem;
     box-shadow: var(--shadow-md);
     transition: all 0.3s ease;
+    transition: border-left 0.3s ease;
     display: flex;
     flex-direction: column;
+    border-left: 4px solid var(--bg-primary);
 }
 
 .project-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-xl);
+    border-left: 4px solid var(--primary-color);
 }
 
 .project-header {
@@ -643,9 +651,9 @@ body {
 
 .contact-content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 4rem;
-    max-width: 1000px;
+    max-width: 512px;
     margin: 0 auto;
 }
 
@@ -723,6 +731,8 @@ body {
     color: white;
     text-align: center;
     padding: 2rem;
+    /* iOS Safe Area Support - account for home indicator */
+    padding-bottom: calc(2rem + env(safe-area-inset-bottom));
 }
 
 .footer p {
@@ -742,19 +752,30 @@ body {
     }
 
     .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
+        position: absolute;
+        /* left: calc(-100% - 10px); */
+        left: -5px;
+        top: calc(75px);
         flex-direction: column;
-        background-color: var(--bg-primary);
+        background: rgba(255, 255, 255, 1);
+        color: var(--text-primary);
+        backdrop-filter: blur(5px);
+
+        border-radius: 10px;
         width: 100%;
         text-align: center;
-        transition: left 0.3s ease;
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
+        /* iOS Safe Area Support */
+        padding-bottom: env(safe-area-inset-bottom);
+
+        /* transition */
+        transform: translateX(-100%);
+        transition: transform 0.5s ease;
     }
 
     .nav-menu.active {
+        transform: translateX(0);
         left: 0;
     }
 

@@ -20,7 +20,7 @@ hamburger.addEventListener('click', () => {
     if (navMenu.classList.contains('active')) {
         spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
         spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
     } else {
         spans[0].style.transform = 'none';
         spans[1].style.opacity = '1';
@@ -159,15 +159,15 @@ document.querySelectorAll('.stat-card').forEach(card => {
 });
 
 // Add hover effect to project cards
-document.querySelectorAll('.project-card').forEach(card => {
-    card.addEventListener('mouseenter', function() {
-        this.style.borderLeft = '4px solid var(--primary-color)';
-    });
+// document.querySelectorAll('.project-card').forEach(card => {
+//     card.addEventListener('mouseenter', function() {
+//         this.style.borderLeft = '4px solid var(--primary-color)';
+//     });
 
-    card.addEventListener('mouseleave', function() {
-        this.style.borderLeft = 'none';
-    });
-});
+//     card.addEventListener('mouseleave', function() {
+//         this.style.borderLeft = '4px solid var(--bg-primary)';
+//     });
+// });
 
 // Typing effect for hero title (optional enhancement)
 const heroTitle = document.querySelector('.hero h1');
