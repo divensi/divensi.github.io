@@ -12,12 +12,13 @@
     --text-primary: #1e293b;
     --text-secondary: #64748b;
     --text-light: #94a3b8;
+    --text-very-light: #f8fafc;
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
     --bg-dark: #0f172a;
     --border-color: #e2e8f0;
     --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
-    --gradient-1-dark: linear-gradient(135deg, #c9c6fc 0%, #ada2c9 100%);
+    --gradient-1-dark: linear-gradient(135deg, #f16387 0%, #f65ce9 100%);
     --gradient-2: linear-gradient(135deg, #0ea5e9 0%, #bcbeff 100%);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
@@ -80,22 +81,27 @@ body {
     position: sticky;
     top: 5px;
     width: calc(100% - 10px);
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0);
     color: var(--text-primary);
     backdrop-filter: blur(5px);
     /* box-shadow: var(--shadow-sm); */
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     margin: 0 5px;
     border-radius: 10px;
     /* iOS Safe Area Support */
     padding-top: env(safe-area-inset-top);
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
+
+
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .navbar.scrolled {
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-xl);
     background: rgba(255, 255, 255, 0.5);
 }
 
@@ -110,6 +116,17 @@ body {
 .navbar .nav-brand .logo {
     font-size: 1.5rem;
     font-weight: 700;
+    background: var(--gradient-1-dark);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    text-decoration-line: none;
+    color: var(--text-very-light);
+}
+
+
+.navbar.scrolled .nav-brand .logo {
     background: var(--gradient-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -124,10 +141,14 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: var(--text-primary);
+    color: var(--text-very-light);
     font-weight: 500;
     transition: color 0.3s ease;
     position: relative;
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--text-primary);
 }
 
 .nav-link::after {
@@ -159,9 +180,13 @@ body {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--text-primary);
+    background: var(--text-very-light);
     border-radius: 2px;
     transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar.scrolled .hamburger span {
+    background: var(--text-primary);
 }
 
 /* Hero Section */
@@ -759,15 +784,13 @@ body {
         flex-direction: column;
         background: rgba(255, 255, 255, 1);
         color: var(--text-primary);
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(20px);
 
         border-radius: 10px;
         width: 100%;
         text-align: center;
         box-shadow: var(--shadow-lg);
         padding: 2rem 0;
-        /* iOS Safe Area Support */
-        padding-bottom: env(safe-area-inset-bottom);
 
         /* transition */
         transform: translateX(-100%);
@@ -777,6 +800,10 @@ body {
     .nav-menu.active {
         transform: translateX(0);
         left: 0;
+    }
+
+    .nav-link {
+        color: var(--text-primary);
     }
 
     .hero h1 {
