@@ -158,16 +158,6 @@ document.querySelectorAll('.stat-card').forEach(card => {
     statsObserver.observe(card);
 });
 
-// Add hover effect to project cards
-// document.querySelectorAll('.project-card').forEach(card => {
-//     card.addEventListener('mouseenter', function() {
-//         this.style.borderLeft = '4px solid var(--primary-color)';
-//     });
-
-//     card.addEventListener('mouseleave', function() {
-//         this.style.borderLeft = '4px solid var(--bg-primary)';
-//     });
-// });
 
 // Typing effect for hero title (optional enhancement)
 const heroTitle = document.querySelector('.hero h1');
