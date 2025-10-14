@@ -13,11 +13,12 @@
     --text-secondary: #64748b;
     --text-light: #94a3b8;
     --text-very-light: #f8fafc;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-dark: #0f172a;
+    --bg-primary: #ffffff66;
+    --bg-secondary: #f8fafc66;
+    --bg-dark: #0f172a66;
     --border-color: #e2e8f0;
-    --gradient-1: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    --gradient-1: linear-gradient(135deg, #6366f1 0%, #bb5cf6 100%, #f65ce9 100%);
+    --gradient-1-background: linear-gradient(135deg, #4e51ec 0%, #d75cf6 100%, #f65cb1 100%);
     --gradient-1-dark: linear-gradient(135deg, #f16387 0%, #f65ce9 100%);
     --gradient-2: linear-gradient(135deg, #0ea5e9 0%, #bcbeff 100%);
     --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
@@ -37,12 +38,28 @@ body {
     /* iOS Safe Area Support */
     padding-left: env(safe-area-inset-left);
     padding-right: env(safe-area-inset-right);
-    background-size: cover;
-    background-position: center;
     /* height: 100svh; */
 
     /* padding-top: constant(safe-area-inset-top); Fallback for older iOS versions */
     /* padding-top: env(safe-area-inset-top); */
+
+
+    background: var(--gradient-1);
+    animation: gradient 10s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
 }
 
 .container {
@@ -86,7 +103,7 @@ body {
     backdrop-filter: blur(5px);
     /* box-shadow: var(--shadow-sm); */
     z-index: 1000;
-    transition: all 0.5s ease;
+    border: 1px solid transparent;
     margin: 0 5px;
     border-radius: 10px;
     /* iOS Safe Area Support */
@@ -95,14 +112,18 @@ body {
     padding-right: env(safe-area-inset-right);
 
 
+
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+
+    transition: border 1s ease, background 1s ease, box-shadow 1s ease;
 }
 
 .navbar.scrolled {
     box-shadow: var(--shadow-xl);
-    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(245, 245, 245, 0.6);
 }
 
 .navbar .container {
@@ -116,13 +137,15 @@ body {
 .navbar .nav-brand .logo {
     font-size: 1.5rem;
     font-weight: 700;
-    background: var(--gradient-1-dark);
+    background: white;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-decoration: none;
     text-decoration-line: none;
     color: var(--text-very-light);
+
+    transition: background 1s ease;
 }
 
 
@@ -196,7 +219,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     position: relative;
     overflow: hidden;
     /* iOS Safe Area Support - ensure content is properly positioned */
@@ -779,7 +801,7 @@ body {
     .nav-menu {
         position: absolute;
         /* left: calc(-100% - 10px); */
-        left: -5px;
+        left: -10px;
         top: calc(75px);
         flex-direction: column;
         background: rgba(255, 255, 255, 1);
