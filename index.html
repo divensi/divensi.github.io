@@ -19,14 +19,18 @@
                 <a class="logo" href="#home">&lt;FD/&gt;</a>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link" data-i18n="nav.home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#education" class="nav-link" data-i18n="nav.education">Education</a></li>
+                <li><a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a></li>
             </ul>
+            <div class="lang-switcher" id="lang-switcher" role="group" aria-label="Language">
+                <button type="button" class="lang-btn" data-lang="en" aria-label="English" aria-pressed="true">EN</button>
+                <button type="button" class="lang-btn" data-lang="pt" aria-label="Português" aria-pressed="false">PT</button>
+            </div>
             <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
@@ -40,13 +44,13 @@
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="animate-fade-in">Felipe Divensi</h1>
-                <p class="hero-subtitle animate-fade-in-delay-1">Software Architect · Bachelor of Computer Science</p>
-                <p class="hero-description animate-fade-in-delay-2">
+                <p class="hero-subtitle animate-fade-in-delay-1" data-i18n="hero.subtitle">Software Architect · Bachelor of Computer Science</p>
+                <p class="hero-description animate-fade-in-delay-2" data-i18n="hero.description">
                     Experienced Software Architect with over 10 years designing scalable, cloud-native solutions across AWS, Azure, and GCP. AI-driven fraud detection, voice recognition, and automation that enhance operational efficiency and security.
                 </p>
                 <div class="hero-cta animate-fade-in-delay-3">
-                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
-                    <a href="#projects" class="btn btn-secondary">View Work</a>
+                    <a href="#contact" class="btn btn-primary" data-i18n="hero.ctaTouch">Get in Touch</a>
+                    <a href="#projects" class="btn btn-secondary" data-i18n="hero.ctaWork">View Work</a>
                 </div>
             </div>
         </div>
@@ -58,20 +62,20 @@
     <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <h2 class="section-title" data-i18n="about.title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="lead">
+                    <p class="lead" data-i18n="about.lead">
                         Experienced Software Architect with over 10 years of expertise in designing and implementing scalable,
                         cloud-native solutions across AWS, Azure, and GCP.
                     </p>
-                    <p>
+                    <p data-i18n="about.p1">
                         Demonstrated success in leading cross-functional development teams to deliver AI-driven fraud detection,
                         voice recognition, and automation solutions that enhance operational efficiency and security. Skilled in
                         full-stack development, cloud migrations, and optimizing ETL processes to ensure system stability,
                         scalability, and cost-effectiveness.
                     </p>
-                    <p>
+                    <p data-i18n="about.p2">
                         Proficient in a wide range of programming languages and frameworks, with a strong commitment to delivering
                         high-quality software solutions that align with business objectives and user needs. Based in Cascavel, PR, Brazil.
                         Portuguese (native), English (fluent), Spanish and French (basic).
@@ -80,15 +84,15 @@
                 <div class="about-stats">
                     <div class="stat-card">
                         <div class="stat-number">10+</div>
-                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-label" data-i18n="about.statYears">Years Experience</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">15+</div>
-                        <div class="stat-label">Technologies Mastered</div>
+                        <div class="stat-label" data-i18n="about.statTech">Technologies Mastered</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">4</div>
-                        <div class="stat-label">Languages Spoken</div>
+                        <div class="stat-label" data-i18n="about.statLangs">Languages Spoken</div>
                     </div>
                 </div>
             </div>
@@ -98,11 +102,11 @@
     <!-- Skills Section -->
     <section id="skills" class="skills section">
         <div class="container">
-            <h2 class="section-title">Technical Expertise</h2>
+            <h2 class="section-title" data-i18n="skills.title">Technical Expertise</h2>
             <div class="skills-grid">
                 <div class="skill-category">
                     <div class="skill-icon">💻</div>
-                    <h3>Programming Languages</h3>
+                    <h3 data-i18n="skills.catLangs">Programming Languages</h3>
                     <ul>
                         <li>JavaScript / TypeScript</li>
                         <li>C# / Java / Python</li>
@@ -112,7 +116,7 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">🏗️</div>
-                    <h3>Frameworks & Libraries</h3>
+                    <h3 data-i18n="skills.catFrameworks">Frameworks & Libraries</h3>
                     <ul>
                         <li>Node.js / React / Vue / Angular</li>
                         <li>SwiftUI / React Native</li>
@@ -121,7 +125,7 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">☁️</div>
-                    <h3>Cloud Platforms</h3>
+                    <h3 data-i18n="skills.catCloud">Cloud Platforms</h3>
                     <ul>
                         <li>AWS / Azure / GCP</li>
                         <li>Docker / Kubernetes</li>
@@ -130,7 +134,7 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">🗄️</div>
-                    <h3>Databases</h3>
+                    <h3 data-i18n="skills.catDatabases">Databases</h3>
                     <ul>
                         <li>Microsoft SQL Server / PostgreSQL</li>
                         <li>Oracle / MySQL / MongoDB</li>
@@ -139,7 +143,7 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">🔧</div>
-                    <h3>Tools & Methodologies</h3>
+                    <h3 data-i18n="skills.catTools">Tools & Methodologies</h3>
                     <ul>
                         <li>Linux / macOS / Windows</li>
                         <li>Git / Jenkins / CI/CD</li>
@@ -148,7 +152,7 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">🤖</div>
-                    <h3>AI Integration</h3>
+                    <h3 data-i18n="skills.catAI">AI Integration</h3>
                     <ul>
                         <li>OpenAI's ChatGPT</li>
                         <li>Llama / TensorFlow / PyTorch</li>
@@ -156,11 +160,9 @@
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">👥</div>
-                    <h3>Spoken Languages</h3>
+                    <h3 data-i18n="skills.catSpoken">Spoken Languages</h3>
                     <ul>
-                        <li>Portuguese (native)</li>
-                        <li>English (fluent)</li>
-                        <li>Spanish / French (basic)</li>
+                        <li data-i18n="skills.spokenList">Portuguese (native), English (fluent), Spanish / French (basic)</li>
                     </ul>
                 </div>
             </div>
@@ -170,15 +172,15 @@
     <!-- Experience Section -->
     <section id="experience" class="experience section">
         <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
+            <h2 class="section-title" data-i18n="experience.title">Professional Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2 years · São Paulo, Brazil</div>
-                        <h3>Software Architect</h3>
-                        <h4>Technology Consulting Firm</h4>
-                        <p>
+                        <div class="timeline-date" data-i18n="experience.exp1Date">2 years · São Paulo, Brazil</div>
+                        <h3 data-i18n="experience.exp1Title">Software Architect</h3>
+                        <h4 data-i18n="experience.exp1Company">Technology Consulting Firm</h4>
+                        <p data-i18n="experience.exp1Desc">
                             Designed, developed, and trained an AI-driven machine learning model for fraud detection in document verification, enhancing security and compliance. Implemented and trained an advanced ML-based AI solution for voice recognition, improving user authentication and accessibility. Architected robust software solutions to optimize ETL processes using AWS Step Functions, Lambda, Batch, and Fargate. Automated critical legacy processes and led cross-functional development teams.
                         </p>
                         <div class="tags">
@@ -192,10 +194,10 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">2 years 10 months · São Paulo, Brazil</div>
-                        <h3>Senior Software Engineer & Tech Lead</h3>
-                        <h4>Healthcare Technology Company</h4>
-                        <p>
+                        <div class="timeline-date" data-i18n="experience.exp2Date">2 years 10 months · São Paulo, Brazil</div>
+                        <h3 data-i18n="experience.exp2Title">Senior Software Engineer & Tech Lead</h3>
+                        <h4 data-i18n="experience.exp2Company">Healthcare Technology Company</h4>
+                        <p data-i18n="experience.exp2Desc">
                             Led a team of 7 developers in designing and implementing scalable web applications and APIs for healthcare professionals. Enhanced the stability, scalability, and cost-efficiency of critical healthcare applications, ensuring high availability. Applied Agile methodologies, maintained and modernized legacy software systems, and conducted in-depth software design reviews. Implemented best practices for software quality, security, and performance.
                         </p>
                         <div class="tags">
@@ -209,10 +211,10 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">3 years 3 months · São Paulo, Brazil</div>
-                        <h3>Senior Software Engineer / Software Architect</h3>
-                        <h4>Software Development Consulting</h4>
-                        <p>
+                        <div class="timeline-date" data-i18n="experience.exp3Date">3 years 3 months · São Paulo, Brazil</div>
+                        <h3 data-i18n="experience.exp3Title">Senior Software Engineer / Software Architect</h3>
+                        <h4 data-i18n="experience.exp3Company">Software Development Consulting</h4>
+                        <p data-i18n="experience.exp3Desc">
                             Developed an AI-powered chatbot to improve helpdesk efficiency and customer satisfaction. Authored comprehensive software documentation and architected innovative solutions. Redesigned system architecture and optimized cloud resource allocation, reducing Google Cloud infrastructure costs by more than 50% through workload right-sizing, service consolidation, and elimination of inefficient patterns. Led development teams and established best practices; worked on mobile, web, and serverless solutions.
                         </p>
                         <div class="tags">
@@ -226,10 +228,10 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">11 months · São Paulo, Brazil</div>
-                        <h3>Senior Software Engineer</h3>
-                        <h4>IT Consulting Firm</h4>
-                        <p>
+                        <div class="timeline-date" data-i18n="experience.exp4Date">11 months · São Paulo, Brazil</div>
+                        <h3 data-i18n="experience.exp4Title">Senior Software Engineer</h3>
+                        <h4 data-i18n="experience.exp4Company">IT Consulting Firm</h4>
+                        <p data-i18n="experience.exp4Desc">
                             Utilized Agile methodologies to enhance project delivery efficiency. Developed end-to-end solutions for mobile, web, and backend systems. Led the migration of self-hosted software to cloud platforms, improving scalability. Implemented unit and end-to-end testing strategies to ensure software reliability. Worked on both native and hybrid mobile development projects.
                         </p>
                         <div class="tags">
@@ -243,10 +245,10 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">1 year 4 months · Medianeira, Paraná, Brazil</div>
-                        <h3>Software Engineer</h3>
-                        <h4>Software Company</h4>
-                        <p>
+                        <div class="timeline-date" data-i18n="experience.exp5Date">1 year 4 months · Medianeira, Paraná, Brazil</div>
+                        <h3 data-i18n="experience.exp5Title">Software Engineer</h3>
+                        <h4 data-i18n="experience.exp5Company">Software Company</h4>
+                        <p data-i18n="experience.exp5Desc">
                             Applied Agile methodologies and performed in-depth requirements analysis. Migrated critical legacy desktop applications to cloud environments. Developed a feature-rich mobile application using React Native, ensuring parity with the web app. Worked extensively with React, React Native, Express, and MongoDB. Conducted debugging and performance optimization of legacy applications.
                         </p>
                         <div class="tags">
@@ -259,10 +261,10 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content">
-                        <div class="timeline-date">1 year 9 months · Medianeira, Paraná, Brazil</div>
-                        <h3>Software Analyst</h3>
-                        <h4>Agribusiness Cooperative</h4>
-                        <p>
+                        <div class="timeline-date" data-i18n="experience.exp6Date">1 year 9 months · Medianeira, Paraná, Brazil</div>
+                        <h3 data-i18n="experience.exp6Title">Software Analyst</h3>
+                        <h4 data-i18n="experience.exp6Company">Agribusiness Cooperative</h4>
+                        <p data-i18n="experience.exp6Desc">
                             Developed and maintained web applications and APIs for various business needs. Built full-stack solutions using JavaScript, C#, Java, and PHP. Managed and optimized MySQL and Oracle databases. Designed and automated reporting systems to support business operations.
                         </p>
                         <div class="tags">
@@ -279,14 +281,14 @@
     <!-- Projects Section -->
     <section id="projects" class="projects section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2 class="section-title" data-i18n="projects.title">Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>AI-Driven Fraud Detection System</h3>
-                        <span class="project-type">AI/ML</span>
+                        <h3 data-i18n="projects.fraudTitle">AI-Driven Fraud Detection System</h3>
+                        <span class="project-type" data-i18n="projects.typeAiml">AI/ML</span>
                     </div>
-                    <p class="project-description">
+                    <p class="project-description" data-i18n="projects.fraudDesc">
                         Designed and developed an advanced AI-powered fraud detection system that enhances security and
                         operational efficiency. Implemented machine learning models to identify and prevent fraudulent
                         activities in real-time across multiple channels.
@@ -300,21 +302,21 @@
                     <div class="project-metrics">
                         <div class="metric">
                             <span class="metric-value">95%</span>
-                            <span class="metric-label">Accuracy</span>
+                            <span class="metric-label" data-i18n="projects.metricAccuracy">Accuracy</span>
                         </div>
                         <div class="metric">
                             <span class="metric-value">Real-time</span>
-                            <span class="metric-label">Detection</span>
+                            <span class="metric-label" data-i18n="projects.metricDetection">Detection</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Voice Recognition AI System</h3>
-                        <span class="project-type">AI/ML</span>
+                        <h3 data-i18n="projects.voiceTitle">Voice Recognition AI System</h3>
+                        <span class="project-type" data-i18n="projects.typeAiml">AI/ML</span>
                     </div>
-                    <p class="project-description">
+                    <p class="project-description" data-i18n="projects.voiceDesc">
                         Implemented an advanced AI solution for voice recognition technology that processes natural language
                         and provides intelligent responses. Integrated with modern machine learning frameworks to deliver
                         high-accuracy speech-to-text and text-to-speech capabilities.
@@ -328,21 +330,21 @@
                     <div class="project-metrics">
                         <div class="metric">
                             <span class="metric-value">90%+</span>
-                            <span class="metric-label">Accuracy</span>
+                            <span class="metric-label" data-i18n="projects.metricAccuracy">Accuracy</span>
                         </div>
                         <div class="metric">
                             <span class="metric-value">Multi-lang</span>
-                            <span class="metric-label">Support</span>
+                            <span class="metric-label" data-i18n="projects.metricMultiLang">Support</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Healthcare Application Optimization</h3>
-                        <span class="project-type">Enterprise</span>
+                        <h3 data-i18n="projects.healthTitle">Healthcare Application Optimization</h3>
+                        <span class="project-type" data-i18n="projects.typeEnterprise">Enterprise</span>
                     </div>
-                    <p class="project-description">
+                    <p class="project-description" data-i18n="projects.healthDesc">
                         Led the enhancement of healthcare applications for improved stability, scalability, and cost-efficiency.
                         Optimized ETL processes and automated critical legacy systems while maintaining high availability
                         and compliance standards for medical data processing.
@@ -356,21 +358,21 @@
                     <div class="project-metrics">
                         <div class="metric">
                             <span class="metric-value">7</span>
-                            <span class="metric-label">Team Members</span>
+                            <span class="metric-label" data-i18n="projects.metricTeam">Team Members</span>
                         </div>
                         <div class="metric">
                             <span class="metric-value">High</span>
-                            <span class="metric-label">Availability</span>
+                            <span class="metric-label" data-i18n="projects.metricAvailability">Availability</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Homelab Infrastructure</h3>
-                        <span class="project-type">Infrastructure</span>
+                        <h3 data-i18n="projects.homelabTitle">Homelab Infrastructure</h3>
+                        <span class="project-type" data-i18n="projects.typeInfra">Infrastructure</span>
                     </div>
-                    <p class="project-description">
+                    <p class="project-description" data-i18n="projects.homelabDesc">
                         Self-hosted homelab for ML experimentation and local inference of large language models (OpenAI GPT-OSS, DeepSeek). Containerization and orchestration with Docker, Kubernetes, and Terraform; service images, cluster provisioning, and deployments via Helm and Kubernetes manifests. GPU-enabled workloads for local model serving, virtualized environments for networking (VLANs, routing, firewall), home automation with IoT, and workflow orchestration with Apache Airflow.
                     </p>
                     <div class="project-tech">
@@ -382,21 +384,21 @@
                     <div class="project-metrics">
                         <div class="metric">
                             <span class="metric-value">Ongoing</span>
-                            <span class="metric-label">Personal</span>
+                            <span class="metric-label" data-i18n="projects.metricPersonal">Personal</span>
                         </div>
                         <div class="metric">
                             <span class="metric-value">GPU</span>
-                            <span class="metric-label">Inference</span>
+                            <span class="metric-label" data-i18n="projects.metricInference">Inference</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Parquet Viewer</h3>
-                        <span class="project-type">Open Source</span>
+                        <h3 data-i18n="projects.parquetTitle">Parquet Viewer</h3>
+                        <span class="project-type" data-i18n="projects.typeOpenSource">Open Source</span>
                     </div>
-                    <p class="project-description">
+                    <p class="project-description" data-i18n="projects.parquetDesc">
                         Cross-platform desktop application (Linux, macOS, Windows) for visualizing, searching, and editing Apache Parquet files. Efficient columnar data loading for large datasets with minimal memory footprint. User-friendly interface for schema inspection, filtering, and in-place data modification. Published as open-source with modular architecture for extensibility and community contributions.
                     </p>
                     <div class="project-tech">
@@ -407,21 +409,21 @@
                     <div class="project-metrics">
                         <div class="metric">
                             <span class="metric-value">Ongoing</span>
-                            <span class="metric-label">Open Source</span>
+                            <span class="metric-label" data-i18n="projects.metricOpenSource">Open Source</span>
                         </div>
                         <div class="metric">
                             <span class="metric-value">3</span>
-                            <span class="metric-label">Platforms</span>
+                            <span class="metric-label" data-i18n="projects.metricPlatforms">Platforms</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-header">
-                        <h3>Airflow Client for iOS, iPadOS & macOS</h3>
-                        <span class="project-type">Native</span>
+                        <h3 data-i18n="projects.airflowTitle">Airflow Client for iOS, iPadOS & macOS</h3>
+                        <span class="project-type" data-i18n="projects.typeNative">Native</span>
                     </div>
-                    <p class="project-description">
+                    <p class="project-description" data-i18n="projects.airflowDesc">
                         Native Swift-based client for Apache Airflow supporting iOS, iPadOS, and macOS. Secure multi-instance management with token-based authentication and environment isolation. Monitor DAGs, task logs, execution states, and manually trigger jobs across multiple Airflow deployments. Performance-focused with offline caching and platform-consistent UI/UX. CI/CD with Xcode Cloud, automated tests, and continuous delivery to TestFlight for internal distribution.
                     </p>
                     <div class="project-tech">
@@ -433,11 +435,11 @@
                     <div class="project-metrics">
                         <div class="metric">
                             <span class="metric-value">Ongoing</span>
-                            <span class="metric-label">Personal</span>
+                            <span class="metric-label" data-i18n="projects.metricPersonal">Personal</span>
                         </div>
                         <div class="metric">
                             <span class="metric-value">TestFlight</span>
-                            <span class="metric-label">Distribution</span>
+                            <span class="metric-label" data-i18n="projects.metricDistribution">Distribution</span>
                         </div>
                     </div>
                 </div>
@@ -448,18 +450,18 @@
     <!-- Education Section -->
     <section id="education" class="education section">
         <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
+            <h2 class="section-title" data-i18n="education.title">Education & Certifications</h2>
             <div class="education-content">
                 <div class="education-card">
-                    <h3>Bachelor's Degree in Computer Science</h3>
-                    <h4>Federal University of Technology – Paraná, Campus Medianeira, Paraná, Brazil</h4>
-                    <p>Academic Work Awarded by the Brazilian Academy of Forensic Sciences.</p>
-                    <p class="education-courses"><strong>Relevant courses:</strong> Pentaho Business Intelligence Open Source; Business Process Model and Notation (BPMN); LGPD – OneTrust Certified Professional.</p>
+                    <h3 data-i18n="education.degreeTitle">Bachelor's Degree in Computer Science</h3>
+                    <h4 data-i18n="education.degreeSchool">Federal University of Technology – Paraná, Campus Medianeira, Paraná, Brazil</h4>
+                    <p data-i18n="education.degreeAward">Academic Work Awarded by the Brazilian Academy of Forensic Sciences.</p>
+                    <p class="education-courses" data-i18n="education.degreeCourses">Relevant courses: Pentaho Business Intelligence Open Source; Business Process Model and Notation (BPMN); LGPD – OneTrust Certified Professional.</p>
                 </div>
                 <div class="education-card">
-                    <h3>TOEFL ITP Level B2</h3>
-                    <h4>Test of English as a Foreign Language (TOEFL), 2018 · UTFPR, Brazil</h4>
-                    <p>Certification in English as a foreign language.</p>
+                    <h3 data-i18n="education.toeflTitle">TOEFL ITP Level B2</h3>
+                    <h4 data-i18n="education.toeflSchool">Test of English as a Foreign Language (TOEFL), 2018 · UTFPR, Brazil</h4>
+                    <p data-i18n="education.toeflDesc">Certification in English as a foreign language.</p>
                 </div>
             </div>
         </div>
@@ -468,10 +470,10 @@
     <!-- Contact Section -->
     <section id="contact" class="contact section">
         <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
+            <h2 class="section-title" data-i18n="contact.title">Let's Connect</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p class="contact-text">
+                    <p class="contact-text" data-i18n="contact.text">
                         I'm always interested in discussing new projects, innovative ideas, or opportunities to
                         help build exceptional systems. Feel free to reach out!
                     </p>
@@ -501,11 +503,12 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Felipe Divensi. All rights reserved.</p>
-            <p class="footer-tagline">Designing the future, one system at a time.</p>
+            <p>&copy; 2026 Felipe Divensi. <span data-i18n="footer.rights">All rights reserved.</span></p>
+            <p class="footer-tagline" data-i18n="footer.tagline">Designing the future, one system at a time.</p>
         </div>
     </footer>
 
+    <script src="i18n.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
