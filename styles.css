@@ -691,6 +691,56 @@ body {
     margin-top: 0.25rem;
 }
 
+/* Education Section */
+.education {
+    background: var(--bg-primary);
+}
+
+.education-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.education-card {
+    background: var(--bg-secondary);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
+}
+
+.education-card h3 {
+    font-size: 1.375rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.education-card h4 {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.education-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.education-courses {
+    font-size: 0.9375rem;
+    margin-top: 1rem;
+}
+
 /* Contact Section */
 .contact {
     background: var(--bg-primary);
