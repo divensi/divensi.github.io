@@ -205,7 +205,7 @@ body {
     height: 3px;
     background: var(--text-very-light);
     border-radius: 2px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.1s ease, transform 0.3s ease;
 }
 
 .navbar.scrolled .hamburger span {
@@ -221,7 +221,9 @@ body {
 }
 
 .lang-btn {
-    padding: 0.35rem 0.6rem;
+    padding: 0.5rem 0.75rem;
+    min-height: 44px;
+    min-width: 44px;
     font-size: 0.8rem;
     font-weight: 600;
     font-family: inherit;
@@ -230,6 +232,8 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.4);
     border-radius: 6px;
     cursor: pointer;
+    -webkit-tap-highlight-color: rgba(99, 102, 241, 0.2);
+    touch-action: manipulation;
     transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 

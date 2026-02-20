@@ -273,8 +273,29 @@ const i18n = {
 
 document.addEventListener('DOMContentLoaded', () => {
     i18n.init();
-    document.getElementById('navbar')?.addEventListener('click', (e) => {
+    const navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    let lastLangTap = { lang: '', time: 0 };
+    function applyLang(btn) {
+        const lang = btn.getAttribute('data-lang');
+        if (!lang) return;
+        const now = Date.now();
+        if (lang === lastLangTap.lang && now - lastLangTap.time < 400) return;
+        lastLangTap = { lang, time: now };
+        i18n.setLanguage(lang);
+    }
+    navbar.addEventListener('click', (e) => {
         const btn = e.target.closest('[data-lang]');
-        if (btn) i18n.setLanguage(btn.getAttribute('data-lang'));
+        if (btn) {
+            e.preventDefault();
+            applyLang(btn);
+        }
     });
+    navbar.addEventListener('touchend', (e) => {
+        const btn = e.target.closest('[data-lang]');
+        if (btn) {
+            e.preventDefault();
+            applyLang(btn);
+        }
+    }, { passive: false });
 });
