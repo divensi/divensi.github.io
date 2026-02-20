@@ -245,13 +245,10 @@ const i18n = {
         const titleEl = document.querySelector('title');
         if (titleEl) titleEl.textContent = this.get('meta.title');
         document.documentElement.lang = this.currentLang === 'pt' ? 'pt-BR' : 'en';
-        const langSwitcher = document.getElementById('lang-switcher');
-        if (langSwitcher) {
-            langSwitcher.querySelectorAll('[data-lang]').forEach(btn => {
-                btn.classList.toggle('active', btn.getAttribute('data-lang') === this.currentLang);
-                btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === this.currentLang);
-            });
-        }
+        document.querySelectorAll('.lang-switcher [data-lang]').forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === this.currentLang);
+            btn.setAttribute('aria-pressed', btn.getAttribute('data-lang') === this.currentLang);
+        });
     },
 
     setLanguage(lang) {
@@ -276,7 +273,7 @@ const i18n = {
 
 document.addEventListener('DOMContentLoaded', () => {
     i18n.init();
-    document.getElementById('lang-switcher')?.addEventListener('click', (e) => {
+    document.getElementById('navbar')?.addEventListener('click', (e) => {
         const btn = e.target.closest('[data-lang]');
         if (btn) i18n.setLanguage(btn.getAttribute('data-lang'));
     });
